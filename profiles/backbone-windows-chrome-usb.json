@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "profileId": "backbone-one-playstation-windows-chrome-usb-358a-0204-raw",
+  "evidenceDate": "2026-10-26",
+  "testedScope": {
+    "hardware": "PlayStation-edition Backbone One",
+    "os": "Windows",
+    "browser": "Chrome",
+    "browserVersionObserved": "155.0.0.0",
+    "transport": "USB",
+    "sampleSize": "one tested signature; no universality claim"
+  },
+  "signature": {
+    "id": "Backbone One (Vendor: 358a Product: 0204)",
+    "vendorHex": "358a",
+    "productHex": "0204",
+    "mapping": "",
+    "axes": 10,
+    "buttons": 17
+  },
+  "precedence": ["explicit-user-calibration", "browser-standard-mapping", "exact-raw-profile", "fallback"],
+  "sticks": {
+    "left": { "xAxis": 0, "yAxis": 1 },
+    "right": { "xAxis": 2, "yAxis": 5 },
+    "negativeY": "up",
+    "neutralObserved": 0
+  },
+  "triggers": {
+    "left": { "axis": 4, "digitalButton": 8 },
+    "right": { "axis": 3, "digitalButton": 9 },
+    "released": -1,
+    "fullPress": 1,
+    "normalization": "clamp((raw + 1) / 2, 0, 1)",
+    "partialPressureCalibrationRetained": false
+  },
+  "buttons": {
+    "south": 0, "east": 1, "west": 3, "north": 4,
+    "leftShoulder": 6, "rightShoulder": 7,
+    "leftTriggerDigital": 8, "rightTriggerDigital": 9,
+    "threeDots": 10, "menu": 11, "launcher": 12,
+    "leftStick": 13, "rightStick": 14
+  },
+  "unassignedButtons": [2, 5, 15, 16],
+  "unassignedAxes": [6, 7, 8],
+  "dpad": {
+    "axis": 9,
+    "releasedObserved": 1.2857143878936768,
+    "decodeTolerance": 0.08,
+    "clampBeforeDecode": false,
+    "directions": [
+      { "name": "up", "raw": -1, "x": 0, "y": -1 },
+      { "name": "up-right", "raw": -0.7142857, "x": 1, "y": -1 },
+      { "name": "right", "raw": -0.4285714, "x": 1, "y": 0 },
+      { "name": "down-right", "raw": -0.1428571, "x": 1, "y": 1 },
+      { "name": "down", "raw": 0.1428572, "x": 0, "y": 1 },
+      { "name": "down-left", "raw": 0.4285715, "x": -1, "y": 1 },
+      { "name": "left", "raw": 0.7142857, "x": -1, "y": 0 },
+      { "name": "up-left", "raw": 1, "x": -1, "y": -1 }
+    ]
+  },
+  "neutralAxesObserved": [0, 0, 0, -1, -1, 0, 0, 0, 0, 1.2857143878936768],
+  "observedStickExtrema": {
+    "leftX": [-1, 1], "leftY": [-1, 0.94964],
+    "rightX": [-1, 0.93075], "rightY": [-0.99167, 1],
+    "useForPermanentScaling": false
+  },
+  "limitations": [
+    "Not a permanent centre or deadzone calibration",
+    "No separate Create/Share/Capture or Home/PS mapping established",
+    "Held first samples do not prove a captured rising edge",
+    "No certification of Android/iOS, Steam Input, other revisions, browsers, native APIs or complete gameplay"
+  ],
+  "source": "../docs/verified-mapping.md"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "backbone-controller-mapping-chrome",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A measured Backbone One raw Gamepad API mapping for Windows Chrome USB",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test test/adapter.test.mjs test/capture.test.mjs test/server.test.mjs",
+    "capture": "node tools/serve.mjs"
+  }
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'none'; img-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Local controller capture</title>
+<link rel="stylesheet" href="./style.css">
+<main>
+  <h1>Local controller capture</h1>
+  <p>Gamepad API only. No uploads, telemetry, keyboard logging, storage, or raw device IDs.
+    Samples stay in this tab until you explicitly download them or close the page.</p>
+  <p>Run <code>npm run capture</code> and open <code>http://127.0.0.1:8787/capture/</code>.
+    Disconnect other controllers before starting. A real controller press may be needed for browser activation.
+    This tool records raw numeric observations; it does not infer physical mappings.</p>
+  <button id="start" type="button">Start</button>
+  <button id="stop" type="button">Stop</button>
+  <p id="status" role="status">Stopped. Start when ready.</p>
+  <p>Blur, hidden tab, disconnect, or API error stops polling. Press Start again to resume.
+    Held controls are snapshots, not proof of a rising edge. Avoid accounts or personal information in contributions.</p>
+  <label for="label">Physical control</label>
+  <select id="label"></select>
+  <label for="phase">Observation</label>
+  <select id="phase"><option value="released">Released</option><option value="held">Held</option></select>
+  <button id="record" type="button" disabled>Keep snapshot</button>
+  <p id="count">0 / 100 snapshots kept</p>
+  <button id="download" type="button" disabled>Download sanitized JSON</button>
+  <button id="clear" type="button">Clear kept snapshots</button>
+  <h2>Current raw values</h2>
+  <pre id="values">No active snapshot</pre>
+  <p>Review downloaded files before sharing. Unknown family names are omitted. No automatic submission occurs.</p>
+</main>
+<script type="module" src="./app.mjs"></script>
+</html>
